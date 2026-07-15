@@ -1,0 +1,13 @@
+[
+  { "id": "mbappe", "name": "Kylian Mbappe", "team": "France", "position": "FWD" },
+  { "id": "dembele", "name": "Ousmane Dembele", "team": "France", "position": "FWD" },
+  { "id": "olise", "name": "Michael Olise", "team": "France", "position": "MID" },
+  { "id": "yamal", "name": "Lamine Yamal", "team": "Spain", "position": "FWD" },
+  { "id": "merino", "name": "Mikel Merino", "team": "Spain", "position": "MID" },
+  { "id": "porro", "name": "Pedro Porro", "team": "Spain", "position": "DEF" },
+  { "id": "bellingham", "name": "Jude Bellingham", "team": "England", "position": "MID" },
+  { "id": "kane", "name": "Harry Kane", "team": "England", "position": "FWD" },
+  { "id": "pickford", "name": "Jordan Pickford", "team": "England", "position": "GK" },
+  { "id": "messi", "name": "Lionel Messi", "team": "Argentina", "position": "FWD" },
+  { "id": "alvarez", "name": "Julian Alvarez", "team": "Argentina", "position": "FWD" }
+]
