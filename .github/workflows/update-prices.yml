@@ -1,0 +1,34 @@
+name: Update player prices
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date to check (YYYY-MM-DD). Leave blank for today."
+        required: false
+  schedule:
+    # Runs every 3 hours. Adjust the cron below once you know real match times,
+    # or just trigger manually via the Actions tab after a match finishes.
+    - cron: "0 */3 * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install firebase-admin
+
+      - name: Run price update
+        run: node update-prices.js
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
+          TARGET_DATE: ${{ github.event.inputs.date }}
